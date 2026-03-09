@@ -19,8 +19,16 @@ extern "C" {
 #endif
 
 
-#include "i2c.h"
+#include "main.h"
 #include <stdint.h>
+
+
+/**
+ * @brief Configure i2c peripheral for scanning
+ * 
+ * @param hi2c I2C handle Structure definition
+ */
+void I2CScanner_Configure(I2C_HandleTypeDef* hi2c);
 
 /**
  * @brief Scans i2c bus & saves results in static buffer

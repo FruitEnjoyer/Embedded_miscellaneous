@@ -17,6 +17,15 @@
 
 static HAL_StatusTypeDef i2cscanner_results[256] = {0,};
 
+void I2CScanner_Configure(I2C_HandleTypeDef* hi2c)
+{
+    /*    
+        Configuration:
+        
+
+        TODO: Implement configuration via CMSIS
+    */ 
+}
 
 uint8_t I2CScanner_InspectBus(I2C_HandleTypeDef* hi2c)
 {
@@ -32,6 +41,11 @@ uint8_t I2CScanner_InspectBus(I2C_HandleTypeDef* hi2c)
 }
 
 #else
+
+void I2CScanner_Configure(I2C_HandleTypeDef* hi2c)
+{
+    UNUSED(hi2c);
+}
 
 uint8_t I2CScanner_InspectBus(I2C_HandleTypeDef* hi2c)
 {
